@@ -1,4 +1,8 @@
-#!/usr/bin/env node
+// use: forever --spinSleepTime 5000ms --minUptime 1ms bin/client -p 3000 -s razorcdmascot
+// forever logs
+// tail -f path_to_file.log
+
+// #!/usr/bin/env node
 var lt_client = require('../client');
 var open_url = require('openurl');
 
@@ -45,6 +49,7 @@ var opt = {
 
 lt_client(opt.port, opt, function(err, tunnel) {
     if (err) {
+        process.exit(1);
         throw err;
     }
 
@@ -55,6 +60,7 @@ lt_client(opt.port, opt, function(err, tunnel) {
     }
 
     tunnel.on('error', function(err) {
+        process.exit(1);
         throw err;
     });
 });
