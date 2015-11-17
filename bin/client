@@ -1,4 +1,4 @@
-// use: forever --spinSleepTime 5000ms --minUptime 1ms bin/client -p 3000 -s razorcdmascot
+// use: forever --spinSleepTime 5000ms --minUptime 1ms bin/client -p 3000 -s your_subdomain_name
 // forever logs
 // tail -f path_to_file.log
 
