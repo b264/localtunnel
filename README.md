@@ -24,6 +24,15 @@ Thats it! It will connect to the tunnel server, setup the tunnel, and tell you w
 
 You can restart your local server all you want, ```lt``` is smart enough to detect this and reconnect once it is back.
 
+## forever ##
+This shortcut can keep it running if it crashes
+
+``` shell
+npm install
+npm install -g forever
+forever --spinSleepTime 5000ms --minUptime 1ms bin/client -p 3000 -s your_subdomain_name
+```
+
 ### arguments
 
 Below are some common arguments. See `lt --help` for additional arguments
